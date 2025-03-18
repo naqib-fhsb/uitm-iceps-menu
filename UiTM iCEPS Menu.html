@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UiTM Student Menu</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #A0FFA3, #2196F3);
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 1200px; /* Restrict container width */
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 60px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      flex-grow: 1; /* Allow buttons to grow and take available space */
+      flex-basis: 200px; /* Base width, it will grow to fill available space */
+      max-width: 650px; /* Maximum width of the button */
+    }
+
+    button:hover {
+      opacity: 0.8;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    .btn-mystudent { background-color: #FF499E; }
+    .btn-pengecualian { background-color: #2196F3; }
+    .btn-ecr { background-color: #FF9800; }
+    .btn-jadual-seminar { background-color: #9C27B0; }
+    .btn-istudent { background-color: #00BCD4; }
+    .btn-guide { background-color: #8BC34A; }
+    .btn-ufuture { background-color: #FF499E; }
+    .btn-iceps { background-color: #FF5722; }
+
+    /* Media queries for mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .button-row {
+        gap: 15px;
+      }
+
+      button {
+        flex-basis: 45%; /* Buttons will take 45% of the container width */
+        max-width: 300px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .button-row {
+        gap: 10px;
+      }
+
+      button {
+        flex-basis: 100%; /* Buttons will take 100% width of the container */
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My UiTM iCEPS Menu</h1>
+    <div class="button-row">
+      <button class="btn-mystudent" onclick="window.open('https://mystudent.uitm.edu.my/', '_blank')">MyStudent</button>
+      <button class="btn-pengecualian" onclick="window.open('https://iis-iceps.uitm.edu.my/', '_blank')">Pengecualian Kredit</button>
+      <button class="btn-ecr" onclick="window.open('https://ecr.uitm.edu.my/estudent/ecr/index.cfm', '_blank')">ECR (Course Registration System)</button>
+    </div>
+    <div class="button-row">
+      <button class="btn-jadual-seminar" onclick="window.open('https://iceps.uitm.edu.my/index.php/download-new/student#jadual-seminar', '_blank')">Jadual Seminar iCEPS</button>
+      <button class="btn-istudent" onclick="window.open('https://simsweb.uitm.edu.my/SPORTAL_APP/SPORTAL_LOGIN/index_login.htm', '_blank')">iStudent Portal</button>
+      <button class="btn-guide" onclick="window.open('https://sites.google.com/uitm.edu.my/dld/laman-utama', '_blank')">Guide Navigation</button>
+      <button class="btn-ufuture" onclick="window.open('https://ufuture.uitm.edu.my/home/', '_blank')">UFuture</button>
+    </div>
+    <div class="button-row">
+      <button class="btn-iceps" onclick="window.open('https://iceps.uitm.edu.my/index.php/download-new/student', '_blank')">Portal iCEPS (Borang, Manual, Struktur Pengajian, Jadual Peperiksaan, Kalendar)</button>
+    </div>
+  </div>
+</body>
+</html>
+
